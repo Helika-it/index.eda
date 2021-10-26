@@ -98,9 +98,9 @@ body {
   background-color: grey;
   color: #fff;
 }
-.clide-content {
+.slide-content {
   position: relative;
-  max-width: 500px;
+  max-width: 406px;
 }
 .slider-buttons {
   position: absolute;
@@ -149,17 +149,17 @@ body {
   background-color: #fff;
   color: #5F5F61;
 }
-.clide-summer {
+.slide-summer {
   background-image: url(../img/header/summer.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
-.clide-vitamin {
+.slide-vitamin {
   background-image: url(../img/header/vitamin.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
-.clide-autumn {
+.slide-autumn {
   background-image: url(../img/header/autumn.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -438,8 +438,10 @@ body {
   border: 1px solid #E9E9E9;
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
 }
+
 .benefits-image {
-  margin: 30px 105px;
+  display: flex;
+  margin: 30px auto;
 }
 .benefits-title {
   margin-top: 0;
@@ -450,6 +452,7 @@ body {
   text-align: center;
   padding: 0px 56px;
 }
+
 .benefits-description {
   font-weight: normal;
   font-size: 14px;
@@ -468,6 +471,7 @@ body {
 .footer-wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .footer-logo {
   margin-right: 50px;
@@ -482,12 +486,15 @@ body {
 .social-links {
   display: flex;
   align-items: center;
-  margin-left: auto;
 }
 .social-link {
-  margin-left: 30px;
   text-decoration: none;
 }
+.social-link:not(:last-child) {
+  margin-right: 30px;
+}
+
+/*===========================*/
 @media (max-width: 1260px) {
   .container {
     max-width: 960px;
@@ -512,11 +519,29 @@ body {
   .slide {
     padding: 70px;
   }
+  .delivery-cards {
+    justify-content: space-between;
+  }
   .delivery-card {
     max-width: calc(50% - 30px);
   }
   .footer-logo {
     margin-right: 40px;
+  }
+  .social-links {
+    padding-top: 30px;
+    margin-left: 0;
+  }
+  .social-links:not(:last-child) {
+    margin-right: 30px;
+  }
+  .footer-wrapper {
+    flex-wrap: wrap;
+  }
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+
   }
 }
 @media (max-width: 768px) {
@@ -536,6 +561,23 @@ body {
   .promo {
     flex-wrap: wrap;
   }
+  .footer-wrapper {
+    flex-wrap: wrap;
+  }
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .footer-wrapper{
+    justify-content: space-between;
+  }
+  .footer-logo {
+    margin-right: 30px;
+  }
+  .footer-link {
+    margin-right: 15px;
+  }
 }
 @media (max-width: 576px) {
   .container {
@@ -552,5 +594,25 @@ body {
   }
   .benefits-card {
     max-width: 100%;
+  }
+  .footer-nav {
+    margin-top: 20px;
+    display: flex;
+    margin-left: 0;
+  }
+  .footer-link {
+    padding-left: 0;
+    padding-right: 40px;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .social-links {
+    margin-left: 0;
+    margin-right: 15px;
+    padding-top: 10px;
+  }
+  .social-link {
+    margin-left: 0;
+    margin-right: 20px;
   }
 }
